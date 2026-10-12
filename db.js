@@ -39,7 +39,7 @@ if (!cols.some(c => c.name === 'image')) {
 
 const admin = db.prepare("SELECT id FROM users WHERE role = 'admin'").get();
 if (!admin) {
-  const hash = bcrypt.hashSync('admin123', 10);
+  const hash = bcrypt.hashSync(process.env.ADMIN_PASSWORD || 'admin123', 10);
   db.prepare("INSERT INTO users (name, email, password, role) VALUES (?, ?, ?, 'admin')")
     .run('Admin', 'admin@campus.com', hash);
   console.log('Default admin created: admin@campus.com / admin123');
