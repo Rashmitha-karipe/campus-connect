@@ -1,0 +1,4 @@
+node_modules
+campus.db
+.env
+public/uploads

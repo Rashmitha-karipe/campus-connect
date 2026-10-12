@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin · Campus-Connect</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">Campus<span>-</span>Connect</div>
+    <div class="who"><span id="who"></span><button class="ghost" onclick="Auth.logout()">Log out</button></div>
+  </header>
+  <main class="container">
+    <h2>Event requests</h2>
+    <div id="msg" class="msg"></div>
+    <div class="tabs">
+      <button data-status="pending" class="active">Pending</button>
+      <button data-status="approved">Approved</button>
+      <button data-status="rejected">Rejected</button>
+    </div>
+    <div id="events" class="grid"></div>
+  </main>
+  <script src="js/common.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

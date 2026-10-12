@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign up · Campus-Connect</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="auth-wrap">
+    <div class="auth-card">
+      <h1>Create account</h1>
+      <p class="sub">Join as a student or an event organizer.</p>
+      <form id="registerForm">
+        <label for="name">Full name</label>
+        <input id="name" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+        <label for="password">Password (6+ characters)</label>
+        <input type="password" id="password" minlength="6" required>
+        <label for="role">I am a</label>
+        <select id="role">
+          <option value="student">Student</option>
+          <option value="organizer">Organizer</option>
+        </select>
+        <button class="full" type="submit">Sign up</button>
+      </form>
+      <div id="msg" class="msg"></div>
+      <p>Already have an account? <a href="index.html">Log in</a></p>
+    </div>
+  </div>
+  <script src="js/common.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

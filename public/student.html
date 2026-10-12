@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Events · Campus-Connect</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">Campus<span>-</span>Connect</div>
+    <div class="who"><span id="who"></span><button class="ghost" onclick="Auth.logout()">Log out</button></div>
+  </header>
+  <main class="container">
+    <h2>Upcoming events</h2>
+    <div id="msg" class="msg"></div>
+    <div class="tabs">
+      <button id="tabAll" class="active">All events</button>
+      <button id="tabMine">My registrations</button>
+    </div>
+    <div id="events" class="grid"></div>
+  </main>
+  <dialog id="eventModal">
+  <div id="modalBody"></div>
+  <button class="quiet" id="closeModal" style="margin-top:.75rem">Close</button>
+</dialog>
+  <script src="js/common.js"></script>
+  <script src="js/student.js"></script>
+</body>
+</html>
